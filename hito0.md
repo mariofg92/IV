@@ -1,6 +1,10 @@
 #Documentación de la práctica 0
 ###
 
+Creamos una nueva rama en el proyecto para la documentación
+
+> $ git checkout -b hito0
+
 Antes de modificar el 0.md y realizar el pull request hacemos un git remote add upstream para asegurarnos de que todo está al día en nuestra maquina local.
 
 > $ git remote add upstream https://github.com/JJ/IV16-17

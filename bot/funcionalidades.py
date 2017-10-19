@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import json
 
 class FuncionalidadDatos:
@@ -9,8 +12,32 @@ class FuncionalidadDatos:
       except IOError as fallo:
         print("Error %d leyendo prueba_actividad.json: %s", fallo.errno,fallo.strerror)
 
-    def ConsultarActividad():
+    def ConsultarActividad(self):
       return self.actividad
 
-    def ComprobarHoras():
-      return self.actividad["horai"] != self.actividad["horaf"]
+    def GetHoraI(self):
+      return str(self.actividad['horai'])
+
+    def GetHoraF(self):
+      return str(self.actividad['horaf'])
+
+    def GetFechaI(self):
+      return str(self.actividad['fechai'])
+
+    def GetFechaF(self):
+      return str(self.actividad['fechaf'])
+
+    def GetTitulo(self):
+      return str(self.actividad['titulo'])
+
+    def GetDescripcion(self):
+      return str(self.actividad['descripcion'])
+
+    def GetLugar(self):
+      return str(self.actividad['lugar'])
+
+    def GetTipo(self):
+      return str(self.actividad['tipo'])
+
+    def GetFacultad(self):
+      return str(self.actividad['facultad'])

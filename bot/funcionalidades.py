@@ -9,7 +9,5 @@ class FuncionalidadDatos:
       except IOError as fallo:
         print("Error %d leyendo prueba_actividad.json: %s", fallo.errno,fallo.strerror)
 
-    def ConsultarActividad:
+    def ConsultarActividad():
       return self.actividad
-
-    def 

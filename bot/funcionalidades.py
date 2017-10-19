@@ -11,3 +11,6 @@ class FuncionalidadDatos:
 
     def ConsultarActividad():
       return self.actividad
+
+    def ComprobarHoras():
+      return self.actividad["horai"] != self.actividad["horaf"]

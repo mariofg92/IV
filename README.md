@@ -14,10 +14,8 @@ Sobre este servicio se implementará un bot de telegram que ofrezca diferente in
 ## Servicios y tecnologías usados.
 
 + Lenguaje usado: **Python**.
-+ Contenedores de **Azure** para pruebas y despliegue.
-+ **API de Telegram**.
-+ Test de integracion: **TravisCI**.
-+ Posiblemente algún servicio de base de datos en la nube.
++ **API de Telegram**. (pyTelegramBotApi)
++ Test de integracion: **TravisCI**. (Elegido por sencillez y facilidad de uso).
 
 ## Proyectos similares.
 

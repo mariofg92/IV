@@ -1,9 +1,11 @@
 import hug
 import json
 from bot.funcionalidades import FuncionalidadDatos
+import os
 
 datos = FuncionalidadDatos()
 
+print os.name
 @hug.get('/')
 def status():
     return { "status": "OK" }

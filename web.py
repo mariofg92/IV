@@ -1,6 +1,6 @@
 import hug
 import json
-from funcionalidades import FuncionalidadDatos
+from bot.funcionalidades import FuncionalidadDatos
 
 @hug.get('/')
 def status():

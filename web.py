@@ -5,7 +5,7 @@ import os
 
 datos = FuncionalidadDatos()
 
-#print os.name
+##print os.name
 @hug.get('/')
 def status():
     return { "status": "OK" }

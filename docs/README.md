@@ -54,8 +54,8 @@ Para que se despligue automaticamente con cada push de github entramos en heroku
 
 #### Comprobando que funciona
 
-Podemos usar algun comando como `curl`
+Podemos usar algun comando como `wget -S`
 ```shell
-$ curl https://actividadetsiit.herokuapp.com/
+$ wget -S https://ugrcalendar.herokuapp.com/
 {"status": "OK"}
 ```

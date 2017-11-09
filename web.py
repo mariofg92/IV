@@ -4,12 +4,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    response = app.response_class(
+    '''response = app.response_class(
         response=json.dumps({"status": "OK"}),
         status=200,
         mimetype='application/json'
     )
-    return response
+    return response'''
+    return "OK"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

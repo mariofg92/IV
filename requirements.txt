@@ -27,8 +27,4 @@ urllib3==1.22
 virtualenv==15.1.0
 virtualenv-clone==0.2.6
 hug
-<<<<<<< HEAD
 os==16.1
-=======
-os
->>>>>>> 78fbbb3551592519d9949426d6b066e46f07cd9c

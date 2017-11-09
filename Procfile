@@ -1,1 +1,1 @@
-web: gunicorn web:app
+web: gunicorn API_web:__hug_wsgi__ --log-file=-

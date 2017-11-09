@@ -1,5 +1,5 @@
 import os
-from flask import Flask, Response, json, jsonfy
+from flask import Flask, Response, json, jsonify
 app = Flask(__name__)
 
 @app.route("/")

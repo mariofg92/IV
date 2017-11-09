@@ -5,6 +5,7 @@ import json
 import os
 
 class FuncionalidadDatos:
+    actividad = {ninguna}
 
     def __init__(self):
       #self.pw = os.environ["PW_BD"]

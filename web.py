@@ -3,7 +3,7 @@ import json
 from bot import FuncionalidadDatos
 import os
 
-datos = FuncionalidadDatos()
+#datos = FuncionalidadDatos()
 
 ##print os.name
 @hug.get('/')

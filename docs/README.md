@@ -44,7 +44,7 @@ $ web: gunicorn web:__hug_wsgi__ --log-file=-
 ```shell
 $ heroku ps:scale web=1
 ```
-Este *dino* es el que se va a encargar de lanzar la sentencia `gunicorn web:__hug_wsgi__ --log-file=-` y con esto el servicio web estará activo.
+Este *dyno* es el que se va a encargar de lanzar la sentencia `gunicorn web:__hug_wsgi__ --log-file=-` y con esto el servicio web estará activo.
 
 #### Despliegue automatico desde github.
 

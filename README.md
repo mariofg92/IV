@@ -5,9 +5,9 @@
 # Proyecto IV: UGRCalendar.
 Este es el repositorio del proyecto final de IV.
 
-###Documentacion [aqui](https://github.com/mariofg92/ivmario/blob/master/docs/README.md)
+### Documentacion [aqui](https://github.com/mariofg92/ivmario/blob/master/docs/README.md)
 
-###Despliegue PaaS: [](https://ugrcalendar.herokuapp.com/)
+### Despliegue PaaS: (https://ugrcalendar.herokuapp.com/)
 
 Autor: Mario Fernández Gómez
 

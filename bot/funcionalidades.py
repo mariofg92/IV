@@ -15,7 +15,7 @@ class FuncionalidadDatos:
         with open(path) as data_file:
             self.actividad = json.load(data_file)
       except IOError as fallo:
-        print("Error %d leyendo prueba_actividad.json: %s", fallo.errno,fallo.strerror)
+        print("Error %d leyendo prueba_actividad.json: %s , dir: %s", fallo.errno,fallo.strerror, path)
 
     def ConsultarActividad(self):
       return self.actividad

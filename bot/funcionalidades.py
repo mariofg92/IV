@@ -5,10 +5,8 @@ import json
 import os
 
 class FuncionalidadDatos:
-    actividad = None
 
     def __init__(self):
-      #self.pw = os.environ["PW_BD"]
       try: # De https://stackoverflow.com/questions/2835559/parsing-values-from-a-json-file
         with open('prueba_actividad.json') as data_file:
             self.actividad = json.load(data_file)

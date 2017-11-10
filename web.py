@@ -1,7 +1,7 @@
 import hug
 import json
-from bot import FuncionalidadDatos
-import os
+#from bot import FuncionalidadDatos
+
 
 #datos = FuncionalidadDatos()
 

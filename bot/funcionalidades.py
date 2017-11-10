@@ -12,7 +12,7 @@ class FuncionalidadDatos:
       else:
           path = 'prueba_actividad.json'
       try: # De https://stackoverflow.com/questions/2835559/parsing-values-from-a-json-file
-        with open(path) as data_file:
+        with open('prueba_actividad.json') as data_file:
             self.actividad = json.load(data_file)
       except IOError as fallo:
         print("Error %d leyendo prueba_actividad.json: %s , cdwdir: %s, actudir %s", fallo.errno,fallo.strerror, os.getcwd(), os.path.dirname(os.path.abspath(__file__)))

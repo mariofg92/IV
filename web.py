@@ -10,8 +10,8 @@ import os
 def status():
     return { "status": "OK" }
 
-@hug.get('/actividad')
+'''@hug.get('/actividad')
 def all():
     actividad = datos.ConsultarActividad()
     """Devuelve toda la actividad"""
-    return { "actividad": actividad }
+    return { "actividad": actividad }'''

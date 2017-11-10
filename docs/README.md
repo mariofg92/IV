@@ -1,18 +1,18 @@
 ## Integración Continua
 
-Para asegurar la calidad del código, estoy usando la biblioteca `unittest` de Python. Existe un archivo `testFuncionalidadBasicav2.py` donde se han desarrollado test unitarios para cada función desarrollada del código.
+Para el testeo uso la biblioteca `unittest` de Python. Existe un archivo `test.py` donde se han desarrollado test unitarios del código.
 
-Debido a que no existe una base de datos diseñada, estoy usando datos estáticos del archivo `actividad_estatica.json` en formato JSON.
+Como todavía no tengo una base de datos diseñada estoy usando datos estáticos en JSON del archivo `prueba_actividad.json`.
 
 Estos tests son lanzados por **TravisCI**. **TravisCI** hace uso de la regla `make test` del Makefile. Esta regla lanza los tests del archivo anteriormente mencionado.
 
-Al realizar estos test, nos aseguramos de que cualquier modificación, actualización o contribución, no *rompen* el código.
+Con estos test, me aseguro de que ante cualquier actualización o modificación en el repositorio, todo sigue funcionando correctamente.
 
 ## Despliegue en un PaaS
 
 ### Justificación del PaaS elegido
 
-Yo he elegido Heroku por la sencillez, porque está ampliamente documentado y porque la funcionalidad básica es gratuita.
+Yo he elegido **Heroku** por la sencillez, porque está ampliamente documentado y porque la funcionalidad básica es gratuita.
 
 ### Despliegue de un Bot
 
@@ -35,8 +35,8 @@ $ heroku apps:create --region eu ugrcalendar
 Con esto estamos creando la aplicación en Heroku en la región de europa.
 
 3. Creamos un archivo `Procfile` donde se le indica que actividad debe realizar al desplegarse
-```
-worker: cd ./botActividadesEtsiit && python bot_actividad.py
+```shell
+$ web: gunicorn web:__hug_wsgi__ --log-file=-
 ```
 
 4. Por último levantamos su dyno con:
@@ -44,8 +44,7 @@ worker: cd ./botActividadesEtsiit && python bot_actividad.py
 ```shell
 $ heroku ps:scale web=1
 ```
-Este *dino* es el que se va a encargar de lanzar la sentencia `cd ./botActividadesEtsiit && python bot_actividad.py` y gracias a esto, el bot estará desplegado.
-que es como hemos llamado su acción.
+Este *dino* es el que se va a encargar de lanzar la sentencia `gunicorn web:__hug_wsgi__ --log-file=-` y con esto el servicio web estará activo.
 
 #### Despliegue automatico desde github.
 
@@ -54,8 +53,22 @@ Para que se despligue automaticamente con cada push de github entramos en heroku
 
 #### Comprobando que funciona
 
-Podemos usar algun comando como `wget -S`
+Podemos verlo directamente desde el navegador o usar algun comando como `curl`
 ```shell
-$ wget -S https://ugrcalendar.herokuapp.com/
-{"status": "OK"}
+$ curl https://ugrcalendar.herokuapp.com/
 ```
+Devuelve:
+`{"status": "OK"}`
+
+Si por ejemplo usamos una ruta implementada como /lugar:
+```shell
+$ curl https://ugrcalendar.herokuapp.com/lugar
+```
+Obtenemos:
+`{"lugar": "ETSIIT"}`
+
+Las diferentes rutas implementadas son:
++ [/](https://ugrcalendar.herokuapp.com)
++ [/actividad](https://ugrcalendar.herokuapp.com/actividad)
++ [/lugar](https://ugrcalendar.herokuapp.com/lugar)
++ [/hora](https://ugrcalendar.herokuapp.com/hora)

@@ -1,7 +1,13 @@
 [![Build Status](https://travis-ci.org/mariofg92/ivmario.svg?branch=master)](https://travis-ci.org/mariofg92/ivmario)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 
 # Proyecto IV: UGRCalendar.
 Este es el repositorio del proyecto final de IV.
+
+###Documentacion [aqui](https://github.com/mariofg92/ivmario/blob/master/docs/README.md)
+
+###Despliegue PaaS: [](https://ugrcalendar.herokuapp.com/)
 
 Autor: Mario Fernández Gómez
 
@@ -15,8 +21,5 @@ Sobre este servicio se implementará un bot de telegram que ofrezca diferente in
 
 + Lenguaje usado: **Python**.
 + **API de Telegram**. (pyTelegramBotApi)
-+ Test de integracion: **TravisCI**. (Elegido por sencillez y facilidad de uso).
-
-## Proyectos similares.
-
-Ojeando los repositorios de los proyectos de los compañeros he descubierto uno que es similar al mio y con el que tal vez pueda colaborar. Es el siguiente [BOT Actividades ETSIIT](https://maverick94.github.io/IV_Proyecto/)
++ Test de integracion: **TravisCI**.
++ Despliegue PaaS: **Heroku**.

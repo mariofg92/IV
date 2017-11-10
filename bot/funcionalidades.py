@@ -10,7 +10,7 @@ class FuncionalidadDatos:
       if os.getcwd() is not os.path.dirname(os.path.abspath(__file__)):
           path = 'bot/prueba_actividad.json'
       else:
-          path = '/prueba_actividad.json'
+          path = 'prueba_actividad.json'
       try: # De https://stackoverflow.com/questions/2835559/parsing-values-from-a-json-file
         with open(path) as data_file:
             self.actividad = json.load(data_file)

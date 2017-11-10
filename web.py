@@ -1,6 +1,6 @@
 import hug
 import json
-#from bot import FuncionalidadDatos
+from bot import funcionalidades
 
 
 #datos = FuncionalidadDatos()

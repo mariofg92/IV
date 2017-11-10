@@ -7,14 +7,13 @@ import os
 class FuncionalidadDatos:
 
     def __init__(self):
-      if os.getcwd() is not os.path.dirname(os.path.abspath(__file__)):
-          path = 'bot/prueba_actividad.json'
-      else:
-          path = 'prueba_actividad.json'
+      path = os.path.dirname(os.path.abspath(__file__)) + '/prueba_actividad.json' #because this file is at the same level that the json file
+
       try: # De https://stackoverflow.com/questions/2835559/parsing-values-from-a-json-file
-        with open('prueba_actividad.json') as data_file:
+        with open(path) as data_file:
             self.actividad = json.load(data_file)
       except IOError as fallo:
+        print(path)
         print("Error %d leyendo prueba_actividad.json: %s , cdwdir: %s, actudir %s", fallo.errno,fallo.strerror, os.getcwd(), os.path.dirname(os.path.abspath(__file__)))
 
     def ConsultarActividad(self):

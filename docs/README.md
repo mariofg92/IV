@@ -1,8 +1,8 @@
 ## Integración Continua
 
-Para el testeo uso la biblioteca `unittest` de Python. Existe un archivo `test.py` donde se han desarrollado test unitarios del código.
+Para el testeo uso la biblioteca `unittest` de Python. Existe un archivo *test.py* donde se han desarrollado test unitarios del código.
 
-Como todavía no tengo una base de datos diseñada estoy usando datos estáticos en JSON del archivo `prueba_actividad.json`.
+Como todavía no tengo una base de datos diseñada estoy usando datos estáticos en JSON del archivo *prueba_actividad.json*.
 
 Estos tests son lanzados por **TravisCI**. **TravisCI** hace uso de la regla `make test` del Makefile. Esta regla lanza los tests del archivo anteriormente mencionado.
 
@@ -34,7 +34,7 @@ $ heroku apps:create --region eu ugrcalendar
 ```
 Con esto estamos creando la aplicación en Heroku en la región de europa.
 
-3. Creamos un archivo `Procfile` donde se le indica que actividad debe realizar al desplegarse
+3. Creamos un archivo *Procfile* donde se le indica que actividad debe realizar al desplegarse
 ```shell
 $ web: gunicorn web:__hug_wsgi__ --log-file=-
 ```

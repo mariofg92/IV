@@ -1,11 +1,10 @@
 import hug
 import json
-from bot import funcionalidades
+from bot.funcionalidades import FuncionalidadDatos
 
 
-datos = funcionalidades.FuncionalidadDatos()
+datos = FuncionalidadDatos()
 
-##print os.name
 @hug.get('/')
 def status():
     return { "status": "OK" }
@@ -15,3 +14,15 @@ def all():
     actividad = datos.ConsultarActividad()
     """Devuelve toda la actividad"""
     return { "actividad": actividad }
+
+@hug.get('/hora')
+def hora():
+    hora = datos.GetHoraI()
+    """Devuelve la hora de inicio"""
+    return { "hora_inicio": hora }
+
+@hug.get('/lugar')
+def lugar():
+    lugar = datos.GetLugar()
+    """Devuelve el lugar de la actividad"""
+    return { "lugar": lugar }

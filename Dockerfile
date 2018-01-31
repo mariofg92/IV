@@ -8,6 +8,6 @@ COPY . .
 
 ENV PORT 80
 
-CMD gunicorn API_web:__hug_wsgi__
+CMD gunicorn web:__hug_wsgi__
 
 EXPOSE 80

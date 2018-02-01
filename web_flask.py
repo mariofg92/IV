@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import os
 import json
-import psycopg2
 from bot.funcionalidades import FuncionalidadDatos
 
 app = Flask(__name__)

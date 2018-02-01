@@ -93,6 +93,7 @@ Las diferentes rutas implementadas son:
 # Contenedor con Docker y Docker hub
 
 URL: https://hub.docker.com/r/mariofg92/ivmario/
+
 PULL: docker pull mariofg92/ivmario
 
 Una vez tenemos docker instalado en local y comprobamos que funciona, nos creamos una cuenta en (https://hub.docker.com/)

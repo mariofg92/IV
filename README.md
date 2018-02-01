@@ -1,6 +1,10 @@
 [![Build Status](https://travis-ci.org/mariofg92/ivmario.svg?branch=master)](https://travis-ci.org/mariofg92/ivmario)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+* Despliegue: https://ugrcalendar.herokuapp.com/
+* Contenedor: http://ugrcalendar.azurewebsites.net/ http://actividadesetsiitweb.azurewebsites.net/status
+* DockerHub: https://hub.docker.com/r/mariofg92/ivmario/
+* Despliegue final:
 
 # Proyecto IV: UGRCalendar.
 Este es el repositorio del proyecto final de IV.

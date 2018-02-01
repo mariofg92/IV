@@ -101,7 +101,7 @@ Una vez tenemos docker instalado en local y comprobamos que funciona, nos creamo
 1. Creamos nuestro Dockerfile.
 
 2. Enlazamos nuestra cuenta de github y añadimos el repositorio del proyecto con "Create automated build" quedando de la siguiente forma:
-![img](https://github.com/mariofg92/ivmario/blob/master/docs/img/app_azure.png)
+![img](https://github.com/mariofg92/ivmario/blob/master/docs/img/dockerhub.png)
 
 3. Probamos que funciona en local con:
 ```shell

@@ -11,7 +11,7 @@ def main():
 
 @hug.get('/status')
 def status():
-    return hug.input_format.json({ "status": "OK" })
+    return { "status": "OK" }
 
 @hug.get('/actividad')
 def all():

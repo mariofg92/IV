@@ -6,6 +6,10 @@ from bot.funcionalidades import FuncionalidadDatos
 datos = FuncionalidadDatos()
 
 @hug.get('/')
+def main():
+    return { "status": "OK" }
+
+@hug.get('/status')
 def status():
     return { "status": "OK" }
 

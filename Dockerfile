@@ -6,6 +6,8 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn web:__hug_wsgi__ -b 0.0.0.0:5000 --log-file=-
+ENV PORT 80
 
-EXPOSE 5000
+CMD gunicorn web:__hug_wsgi__ -b 0.0.0.0:80 --log-file=-
+
+EXPOSE 80

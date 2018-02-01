@@ -4,7 +4,7 @@
 * Despliegue: https://ugrcalendar.herokuapp.com/
 * Contenedor: https://ugrcalendar.azurewebsites.net/status
 * DockerHub: https://hub.docker.com/r/mariofg92/ivmario/
-* Despliegue final:.
+* Despliegue final:...
 
 # Proyecto IV: UGRCalendar.
 Este es el repositorio del proyecto final de IV.

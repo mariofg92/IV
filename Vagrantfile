@@ -5,11 +5,13 @@ require 'vagrant-azure'
 Vagrant.configure('2') do |config|
 
   # Use dummy Azure box
-  config.vm.box = 'azure-dummy'
+  config.vm.box = 'azure'
+  config.vm.box_url = 'https://github.com/msopentech/vagrant-azure/raw/master/dummy.box' #Caja base vacía
   config.vm.network "private_network",ip: "192.168.11.4", virtualbox__intnet: "vboxnet0" #Ip privada
   config.vm.hostname = "localhost"
 
   config.vm.network "forwarded_port", guest: 80, host: 80
+  config.vm.synced_folder ".", "/vagrant", disabled: true
 
 
 
@@ -25,14 +27,14 @@ Vagrant.configure('2') do |config|
     az.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
 
 
-    # az.vm_size = 'Basic_A0' #Tamaño (recursos) de la MV
-    # az.location = 'westeurope'
     az.tcp_endpoints = '80'
     # Specify VM parameters
-    az.vm_name = 'ugrcalendar'
+    az.vm_size = 'Basic_A0' #Tamaño (recursos) de la MV
+    #az.location = 'southcentralus'
+    az.vm_name = 'ugrcalendar-vm'
     az.vm_size = 'Standard_B1s'
     az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'
-    az.resource_group_name = 'vagrant'
+    az.resource_group_name = 'ugrcalendar-group'
   end # config.vm.provider 'azure'
   config.vm.provision "ansible" do |ansible|
     ansible.force_remote_user = true

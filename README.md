@@ -151,33 +151,33 @@ En este caso es un despliegue en IaaS con azure.
 
 Para realizarlo hay que seguir los siguientes pasos (en en orden indicado):
 
-#####1. Instalar vagrant.
-#####2. Instalar el plugin de azure para vagrant.
-#####2. Instalar ansible.
-#####3. Crear el archivo [playbook.yml](https://github.com/mariofg92/ivmario/blob/master/provision/playbook.yml)
-#####4. Instalar el cli 2.0 de azure.
-#####5. Configuración de azure.
-#####6. Crear el archivo [Vagrantfile](https://github.com/mariofg92/ivmario/blob/master/Vagrantfile)
-#####7. Creación de la máquina virtual en azure.
-#####8. Crear archivo [fabfile.py](https://github.com/mariofg92/ivmario/blob/master/despliegue/fabfile.py)
-#####9. Despliegue con fabric.
+##### 1. Instalar vagrant.
+##### 2. Instalar el plugin de azure para vagrant.
+##### 2. Instalar ansible.
+##### 3. Crear el archivo [playbook.yml](https://github.com/mariofg92/ivmario/blob/master/provision/playbook.yml)
+##### 4. Instalar el cli 2.0 de azure.
+##### 5. Configuración de azure.
+##### 6. Crear el archivo [Vagrantfile](https://github.com/mariofg92/ivmario/blob/master/Vagrantfile)
+##### 7. Creación de la máquina virtual en azure.
+##### 8. Crear archivo [fabfile.py](https://github.com/mariofg92/ivmario/blob/master/despliegue/fabfile.py)
+##### 9. Despliegue con fabric.
 
 A continuación voy a detallar algunos de estos pasos, los que a mi personalmente me han costado más o creo que es más importante resaltarlos:
 
 ** __ IMPORTANTE: __ ** Los comandos usados son para el CLI 2.0 de azure.
 
-#####2. Instalar el plugin de azure para vagrant.
+##### 2. Instalar el plugin de azure para vagrant.
 
 En el terminal hacemos:
 ```shell
 $ vagrant plugin install vagrant-azure
 ```
 
-#####4. Instalar el cli 2.0 de azure.
+##### 4. Instalar el cli 2.0 de azure.
 
 Esto dependerá del sistema operativo que uses por lo que te remito a la documentación oficial donde viene explicado para cada uno de ellos: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 
-#####5. Configuración de azure.
+##### 5. Configuración de azure.
 
 En el terminal ejecutamos:
 ```shell
@@ -193,7 +193,7 @@ $ openssl x509 -inform pem -in ~/.ssh/azurevagrant.key -outform der -out ~/.ssh/
 ```
 A continuación vamos a portal de azure: `Más servicios -> Subscripciones -> (Seleccionamos la nuestra) -> Certificados de administración -> Cargar Y subimos nuestro archivo "azurevagrant.cer"``
 
-######## Ahora creamos la aplicación en azure:
+###### Ahora creamos la aplicación en azure:
 ```shell
 $ az ad sp create-for-rbac
 $ az account list --query '[?isDefault].id' -o tsv
@@ -213,7 +213,7 @@ Por ejemplo en mi caso yo crearía la variable de entorno `AZURE_CLIENT_ID` así
 $ export AZURE_CLIENT_ID=63e20d1f-c280-4ade-a2c0-b9cc7e75bf6f
 ```
 
-#####7. Creación de la máquina virtual en azure.
+##### 7. Creación de la máquina virtual en azure.
 
 Simplemente ejecutando:
 ```shell
@@ -221,7 +221,7 @@ $ vagrant up --provider=azure
 ```
 Cuando vagrant acabe vamos a `portal de Azure -> Máquinas virtuales` y ahí nos aparecerá nuestra máquina virtual. Haciendo click en ella nos aparecerá su configuración y ahí podemos ver por ejemplo su IP y su nombre DNS. Las cuales necesitaremos para acceder a ella via ssh o para desplegar con fabric.
 
-#####9. Despliegue con fabric.
+##### 9. Despliegue con fabric.
 
 Una vez ya tenemos nuestro archivo [fabfile.py](https://github.com/mariofg92/ivmario/blob/master/despliegue/fabfile.py) podemos realizar el despliegue que en mi caso sería:
 ```shell

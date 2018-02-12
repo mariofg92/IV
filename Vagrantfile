@@ -14,8 +14,6 @@ Vagrant.configure('2') do |config|
   config.vm.network "forwarded_port", guest: 80, host: 80
   config.vm.synced_folder ".", "/vagrant", disabled: true #Desactiva el SMB
 
-
-
   # Configure the Azure provider
   config.vm.provider 'azure' do |az, override|
     # Specify SSH key
@@ -37,6 +35,7 @@ Vagrant.configure('2') do |config|
     az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'
     az.resource_group_name = 'ugrcalendar-group'
   end # config.vm.provider 'azure'
+  
   config.vm.provision "ansible" do |ansible|
     ansible.force_remote_user = true
     ansible.playbook = "./provision/playbook.yml"

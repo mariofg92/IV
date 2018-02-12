@@ -145,6 +145,7 @@ Prueba de funcionamiento:
 # Diseño del soporte virtual para el despliegue de una aplicación.
 
 URL: http://ugrcalendar-vm.westeurope.cloudapp.azure.com/
+
 IP: 52.166.79.252
 
 En este caso es un despliegue en IaaS con azure.

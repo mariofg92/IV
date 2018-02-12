@@ -10,8 +10,9 @@ Vagrant.configure('2') do |config|
   config.vm.network "private_network",ip: "192.168.11.4", virtualbox__intnet: "vboxnet0" #Ip privada
   config.vm.hostname = "localhost"
 
+  config.vm.network "public_network"
   config.vm.network "forwarded_port", guest: 80, host: 80
-  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.synced_folder ".", "/vagrant", disabled: true #Desactiva el SMB
 
 
 
@@ -29,8 +30,8 @@ Vagrant.configure('2') do |config|
 
     az.tcp_endpoints = '80'
     # Specify VM parameters
-    az.vm_size = 'Basic_A0' #Tamaño (recursos) de la MV
-    #az.location = 'southcentralus'
+    az.vm_size = "Standard_DS2_v2" #Tamaño (recursos) de la MV
+    az.location = 'westeurope'
     az.vm_name = 'ugrcalendar-vm'
     az.vm_size = 'Standard_B1s'
     az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'

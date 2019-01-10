@@ -7,6 +7,9 @@
 * Despliegue final: ugrcalendar-vm.westeurope.cloudapp.azure.com
 
 # Proyecto IV: UGRCalendar.
+Curso: 4º
+Asignatura: IV (Infraestructura Virtual).
+
 Este es el repositorio del proyecto final de IV.
 
 Autor: Mario Fernández Gómez
